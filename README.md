@@ -69,13 +69,38 @@ For more about data: http://www.unb.ca/cic/datasets/nsl.html
 
 ####  HOST BASED TRAFFIC FEATURES IN A NETWORK CONNECTION VECTOR:
 
-32)<b>Dst_host_count:</b> Number of connections having the same destination host IP address  
-33)<b>Dst_host_srv_ count:</b> Number of connections having the same port number  
-34)<b>Dst_host_same _srv_rate:</b> The percentage of connections that were to the same service, among the connections aggregated in dst_host_count (32)  
-35)<b>Dst_host_diff_ srv_rate:</b> The percentage of connections that were to different services, among the connections aggregated in dst_host_count (32)  
-36)<b>Dst_host_same _src_port_rate:</b> The percentage of connections that were to the same source port, among the connections aggregated in dst_host_srv_c ount (33)  
-37)<b>Dst_host_srv_ diff_host_rate:</b> The percentage of connections that were to different destination machines, among the connections aggregated in dst_host_srv_count (33) 
-38)<b>Dst_host_serro r_rate:</b> The percentage of connections that have activated the flag (4) s0, s1, s2 or s3, among the connections aggregated in dst_host_count (32)  
-39)<b>Dst_host_srv_s error_rate:</b> The percent of connections that have activated the flag (4) s0, s1, s2 or s3, among the connections aggregated in dst_host_srv_c ount (33)  
-40)<b>Dst_host_rerro r_rate:</b> The percentage of connections that have activated the flag (4) REJ, among the connections aggregated in dst_host_count (32)  
-41)<b>Dst_host_srv_r error_rate:</b> The percentage of connections that have activated the flag (4) REJ, among the connections aggregated in dst_host_srv_c ount (33) 
+32) <b>Dst_host_count:</b> Number of connections having the same destination host IP address  
+33) <b>Dst_host_srv_ count:</b> Number of connections having the same port number  
+34) <b>Dst_host_same _srv_rate:</b> The percentage of connections that were to the same service, among the connections aggregated in dst_host_count (32)  
+35) <b>Dst_host_diff_ srv_rate:</b> The percentage of connections that were to different services, among the connections aggregated in dst_host_count (32)  
+36) <b>Dst_host_same _src_port_rate:</b> The percentage of connections that were to the same source port, among the connections aggregated in dst_host_srv_c ount (33)  
+37) <b>Dst_host_srv_ diff_host_rate:</b> The percentage of connections that were to different destination machines, among the connections aggregated in dst_host_srv_count (33) 
+38) <b>Dst_host_serro r_rate:</b> The percentage of connections that have activated the flag (4) s0, s1, s2 or s3, among the connections aggregated in dst_host_count (32)  
+39) <b>Dst_host_srv_s error_rate:</b> The percent of connections that have activated the flag (4) s0, s1, s2 or s3, among the connections aggregated in dst_host_srv_c ount (33)  
+40) <b>Dst_host_rerro r_rate:</b> The percentage of connections that have activated the flag (4) REJ, among the connections aggregated in dst_host_count (32)  
+41) <b>Dst_host_srv_r error_rate:</b> The percentage of connections that have activated the flag (4) REJ, among the connections aggregated in dst_host_srv_c ount (33) 
+
+#### Type Features:
+
+<b>Nominal:</b>  Protocol_type(2), Service(3), Flag(4) 
+ 
+<b>Binary:</b> Land(7), logged_in(12), root_shell(14), su_attempted(15), is_host_login(21),, is_guest_login(22) 
+ 
+<b>Numeric:</b> Duration(1), src_bytes(5), dst_bytes(6), wrong_fragment(8), urgent(9), hot(10), num_failed_logins(11), num_compromised(13), num_root(16), num_file_creations(17), num_shells(18), num_access_files(19), num_outbound_cmds(20), count(23), srv_count(24), error_rate(25), srv_serror_rate(26), rerror_rate(27),srv_rerror_rate(28), same_srv_rate(29),diff_srv_rate(30), srv_diff_host_rate(31), dst_host_count(32), dst_host_srv_count(33), dst_host_same_srv_rate(34), dst_host_diff_srv_rate(35), dst_host_same_src_port_rate(36), dst_host_srv_diff_host_rate(37), dst_host_serror_rate(38), dst_host_srv_serror_rate(39), dst_host_rerror_rate(40), dst_host_srv_rerror_rate(41) 
+
+Attack Class : Attack Type
+              
+1) DoS       : Back, Land, Neptune, Pod, Smurf,Teardrop,Apache2, Udpstorm, Processtable, Worm (10) 
+
+2) Probe     : Satan, Ipsweep, Nmap, Portsweep, Mscan, Saint  (6) 
+
+3) R2L       : Guess_Password, Ftp_write, Imap, Phf, Multihop, Warezmaster, Warezclient, Spy, Xlock, Xsnoop, Snmpguess, Snmpgetattack, Httptunnel, Sendmail, Named (16)
+ 
+4) U2R       : Buffer_overflow, Loadmodule, Rootkit, Perl, Sqlattack, Xterm, Ps (7) 
+
+### ATTACK CLASS: 
+
+1. <b>DOS:</b> Denial of service is an attack category, which depletes the victim‟s resources thereby making it unable to handle legitimate requests – e.g. syn flooding. Relevant features: “source bytes” and “percentage of packets with errors”  
+2. <b>Probing:</b> Surveillance and other probing attack‟s objective is to gain information about the remote victim e.g. port scanning. Relevant features: “duration of connection” and “source bytes”  
+3. <b>U2R:</b> unauthorized access to local super user (root) privileges is an attack type, by which an attacker uses a normal account to login into a victim system and tries to gain root/administrator privileges by exploiting some vulnerability in the victim e.g. buffer overflow attacks. Relevant features: “number of file creations” and “number of shell prompts invoked,” 
+4. <b>R2L:</b> unauthorized access from a remote machine, the attacker intrudes into a remote machine and gains local access of the victim machine. E.g. password guessing Relevant features: Network level features – “duration of connection” and “service requested” and host level features - “number of failed login attempts” 
