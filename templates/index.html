@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Network Intrusion Detection System</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+ <div class="login">
+	<h1 style="color:blue;">Network Intrusion Detection System</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+        <label for="attack">Attack:</label>
+        <select id="attack" name="attack">
+          <option value="0">Other</option>
+          <option value="1">neptune</option>
+          <option value="2">normal</option>
+          <option value="3">satan</option>
+        </select><br><br>
+
+        <label for="count">Number of connections to the same destination host as the current connection in the past two seconds :</label>
+    	<input type="text" name="count" placeholder="count" required="required" /><br><br>
+
+    	<label for="dst_host_diff_srv_rate">The percentage of connections that were to different services, among the connections aggregated in dst_host_count :</label>
+        <input type="text" name="dst_host_diff_srv_rate" placeholder="dst_host_diff_srv_rate" required="required" /><br><br>
+
+        <label for="dst_host_same_src_port_rate">The percentage of connections that were to the same source port, among the connections aggregated in dst_host_srv_count :</label>
+		<input type="text" name="dst_host_same_src_port_rate" placeholder="dst_host_same_src_port_rate" required="required" /><br><br>
+
+		<label for="dst_host_same_srv_rate">The percentage of connections that were to the same service, among the connections aggregated in dst_host_count :</label>
+		<input type="text" name="dst_host_same_srv_rate" placeholder="dst_host_same_srv_rate" required="required" /><br><br>
+
+		<label for="dst_host_srv_count">Number of connections having the same port number :</label>
+		<input type="text" name="dst_host_srv_count" placeholder="dst_host_srv_count" required="required" /><br><br>
+
+		<label for="flag">Status of the connection –Normal or Error :</label>
+		<select id="flag" name="flag">
+          <option value="0">Other</option>
+          <option value="1">S0</option>
+          <option value="2">SF</option>
+        </select><br><br>
+
+        <label for="last_flag">Last Flag :</label>
+    	<input type="text" name="last_flag" placeholder="last_flag" required="required" /><br><br>
+
+    	<label for="logged_in">1 if successfully logged in; 0 otherwise :</label>
+        <input type="text" name="logged_in" placeholder="logged_in" required="required" /><br><br>
+
+    	<label for="same_srv_rate">The percentage of connections that were to the same service, among the connections aggregated in count :</label>
+        <input type="text" name="same_srv_rate" placeholder="same_srv_rate" required="required" /><br><br>
+
+        <label for="serror_rate">The percentage of connections that have activated the flag (4) s0, s1, s2 or s3, among the connections aggregated in count :</label>
+        <input type="text" name="serror_rate" placeholder="serror_rate" required="required" /><br><br>
+
+		<label for="service_http">Destination network service used http or not :</label>
+		<select id="service_http" name="service_http">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select><br><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   <br>
+    {% if output %}
+       <h3> Attack Class should be <b style="color:red;">{{ output }}</b>  </h3>
+    {% endif %}
+   </div>
+</body>
+</html>
