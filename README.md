@@ -7,7 +7,7 @@
   * [ATTACK CLASS](#attack-class)
   * [How to Use](#how-to-use)
   * [Directory Tree](#directory-tree)
-  * [License](#license)
+  * [LICENSE](#license)
 
 ### BUSINESS CONTEXT:
 
@@ -157,7 +157,10 @@ Just follow 3 simple steps :
 ├── num_summary.csv
 ├── pandas_profiling.html
 ├── requirements.txt
+├── LICENSE
 ├── Procfile
 ├── README.md
 ```
+
+### LICENSE
 
