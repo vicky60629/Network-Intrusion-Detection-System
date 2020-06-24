@@ -123,19 +123,15 @@ For more about data: http://www.unb.ca/cic/datasets/nsl.html
 
 ### How to Use
 
-Just follow 6 simple steps :
+Just follow 3 simple steps :
 
 1. Go to project website link https://nids-api.herokuapp.com/ .<br>
 2. Fill the form as shown below :<br>
-[![](https://i.imgur.com/5gj4USj.png)]<br>
-`wget https://pjreddie.com/media/files/yolov2.weights`<br>
-`mv yolov2.weights "model_data/yolov2.weights"`<br>
-`wget https://github.com/pjreddie/darknet/raw/master/cfg/yolov2.cfg`<br>
-`mv yolov2.cfg "model_data/yolov2.cfg"`
-3. Review `config.py` for paths and other configurations (explained below)
-4. Run `yad2k.py` to convert YOLOv2 model from darknet to keras model which will be saved in `model_data/` folder.
-5. Put all your images you want to test in `images/` directory.<br>
-**Note:** All images are resized to 608x608 to feed into YOLOv2 model
-6. Run `YOLO.py` and *MAGIC!* Output images will be saved in `output/` directory
+![](https://github.com/vicky60629/Network-Intrusion-Detection-System/blob/master/results/2020-06-15%2015_28_16-Window.png)<br>
+![](https://github.com/vicky60629/Network-Intrusion-Detection-System/blob/master/results/2020-06-15%2015_29_02-Window.png)<br>
+3. Then Click on Predict and you get the predicted attack class .<br>
+![](https://github.com/vicky60629/Network-Intrusion-Detection-System/blob/master/results/2020-06-15%2015_30_02-Window.png)<br>
 
-**If you face any problem converting keras model or anything:** email me at *se.dabasajay@gmail.com*
+**If you face any problem :** email me at *vg60629@gmail.com*
+
+
