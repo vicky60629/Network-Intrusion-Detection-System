@@ -7,12 +7,7 @@
   * [ATTACK CLASS](#attack-class)
   * [How to Use](#how-to-use)
   * [Directory Tree](#directory-tree)
-  * [To Do](#to-do)
-  * [Bug / Feature Request](#bug---feature-request)
-  * [Technologies Used](#technologies-used)
-  * [Team](#team)
   * [License](#license)
-  * [Credits](#credits)
 
 ### BUSINESS CONTEXT:
 
