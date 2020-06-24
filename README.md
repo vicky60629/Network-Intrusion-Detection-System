@@ -4,10 +4,8 @@
   * [BUSINESS CONTEXT](#business-context)
   * [BUSINESS PROBLEM](#business-problem)
   * [DATA AVAILABILITY](#data-availability)
-  * [Attack Class : Attack Type](#attack-class:attack-type)
   * [ATTACK CLASS](#attack-class)
   * [How to Use](#how-to-use)
-  * [Deployement on Heroku](#deployement-on-heroku)
   * [Directory Tree](#directory-tree)
   * [To Do](#to-do)
   * [Bug / Feature Request](#bug---feature-request)
@@ -126,12 +124,45 @@ For more about data: http://www.unb.ca/cic/datasets/nsl.html
 Just follow 3 simple steps :
 
 1. Go to project website link https://nids-api.herokuapp.com/ .<br>
-2. Fill the form as shown below :<br>
+
+2. Fill the form as shown below :<br><br>
+
 ![](https://github.com/vicky60629/Network-Intrusion-Detection-System/blob/master/results/2020-06-15%2015_28_16-Window.png)<br>
 ![](https://github.com/vicky60629/Network-Intrusion-Detection-System/blob/master/results/2020-06-15%2015_29_02-Window.png)<br>
-3. Then Click on Predict and you get the predicted attack class .<br>
+
+3. Then Click on Predict and you get the predicted attack class .<br><br>
+
 ![](https://github.com/vicky60629/Network-Intrusion-Detection-System/blob/master/results/2020-06-15%2015_30_02-Window.png)<br>
 
 **If you face any problem :** email me at *vg60629@gmail.com*
 
+
+### Directory Tree
+
+```
+├── NSL_Dataset
+│   ├── Test.txt
+│   ├── Train.txt
+├── results
+│   ├── 2020-06-15 15_28_16-Window.png
+│   ├── 2020-06-15 15_29_02-Window.png
+│   ├── 2020-06-15 15_30_02-Window.png
+│   ├── 2020-06-15 15_31_30-Window.png
+│   ├── 2020-06-15 15_31_58-Window.png
+│   ├── 2020-06-15 15_32_25-Window.png
+├── static
+│   ├── style.css
+├── templates
+│   ├── index.html
+├── app.py
+├── corrm.csv
+├── Dockerfile
+├── model.pkl
+├── Network Intrusion Detection System.ipynb
+├── num_summary.csv
+├── pandas_profiling.html
+├── requirements.txt
+├── Procfile
+├── README.md
+```
 
