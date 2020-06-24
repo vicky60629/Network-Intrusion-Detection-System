@@ -164,7 +164,7 @@ Just follow 3 simple steps :
 
 ### LICENSE
 
-![MIT License]()
+![MIT License](https://github.com/vicky60629/Network-Intrusion-Detection-System/blob/master/LICENSE)
 
 Copyright (c) 2020 Vicky Gupta
 
