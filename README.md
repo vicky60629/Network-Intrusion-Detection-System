@@ -1,5 +1,21 @@
 # Network-Intrusion-Detection-System
 
+## Table of Content
+  * [BUSINESS CONTEXT](#business-context)
+  * [BUSINESS PROBLEM](#business-problem)
+  * [DATA AVAILABILITY](#data-availability)
+  * [Attack Class : Attack Type](#attack-class:attack-type)
+  * [ATTACK CLASS](#attack-class)
+  * [How to Use](#how-to-use)
+  * [Deployement on Heroku](#deployement-on-heroku)
+  * [Directory Tree](#directory-tree)
+  * [To Do](#to-do)
+  * [Bug / Feature Request](#bug---feature-request)
+  * [Technologies Used](#technologies-used)
+  * [Team](#team)
+  * [License](#license)
+  * [Credits](#credits)
+
 ### BUSINESS CONTEXT:
 
 With the enormous growth of computer networks usage and the huge increase in the number of applications running on top of it, network secrity is becoming increasingly more important. All the computer systems suffer from security vulnerabilities which are both technically difficult and economically costly to be solved by the manufacturers. Therefore, the role of Intrusion Detection Systems (IDSs), as special purpose devices to detect anomalies and attacks in the network, is becoming more important. 
@@ -104,3 +120,22 @@ For more about data: http://www.unb.ca/cic/datasets/nsl.html
 2. <b>Probing:</b> Surveillance and other probing attack‟s objective is to gain information about the remote victim e.g. port scanning. Relevant features: “duration of connection” and “source bytes”  
 3. <b>U2R:</b> unauthorized access to local super user (root) privileges is an attack type, by which an attacker uses a normal account to login into a victim system and tries to gain root/administrator privileges by exploiting some vulnerability in the victim e.g. buffer overflow attacks. Relevant features: “number of file creations” and “number of shell prompts invoked,” 
 4. <b>R2L:</b> unauthorized access from a remote machine, the attacker intrudes into a remote machine and gains local access of the victim machine. E.g. password guessing Relevant features: Network level features – “duration of connection” and “service requested” and host level features - “number of failed login attempts” 
+
+### How to Use
+
+Just follow 6 simple steps :
+
+1. Go to project website link https://nids-api.herokuapp.com/ .<br>
+2. Fill the form as shown below :<br>
+[![](https://i.imgur.com/5gj4USj.png)]<br>
+`wget https://pjreddie.com/media/files/yolov2.weights`<br>
+`mv yolov2.weights "model_data/yolov2.weights"`<br>
+`wget https://github.com/pjreddie/darknet/raw/master/cfg/yolov2.cfg`<br>
+`mv yolov2.cfg "model_data/yolov2.cfg"`
+3. Review `config.py` for paths and other configurations (explained below)
+4. Run `yad2k.py` to convert YOLOv2 model from darknet to keras model which will be saved in `model_data/` folder.
+5. Put all your images you want to test in `images/` directory.<br>
+**Note:** All images are resized to 608x608 to feed into YOLOv2 model
+6. Run `YOLO.py` and *MAGIC!* Output images will be saved in `output/` directory
+
+**If you face any problem converting keras model or anything:** email me at *se.dabasajay@gmail.com*
